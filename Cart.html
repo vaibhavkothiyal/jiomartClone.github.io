@@ -6,9 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+<<<<<<< HEAD
         body{
             font-family: sans-serif;
             background: rgb(255, 254, 255)
+=======
+       *{
+            margin: 0;
+        }
+        nav{
+            background: #007bff;
+            min-width: 1400px;
+            margin: auto;
+            height: 72px;
+        }
+        nav ul{
+            display: flex;
+            text-align: center;
+            margin: 0;
+            width: 1100px;
+            margin: auto;
+        }
+        nav div{
+            margin-left: 1%;
+        }
+        ul h1{
+            height: fit-content;
+            color: white;
+        }
+        ul li {
+            margin: auto;
+            text-decoration: none;
+            list-style: none;
+        }
+       li a{
+           text-decoration: none;
+           color: white;
+           font-size: 15px;
+           font-weight: 400;
+       }
+        ul input{
+            width: 40%;
+            height: 30px;
+            margin: auto;
+            border: none;
+            border-radius: 5px;
+        }
+        #log1 {
+          font-size: 32px;
+          color: white;
+          font-weight: bold;
+        }
+        #log2{
+            font-size: 10px;
+            text-align: right;
+            color: white;
+            font-weight: 300;
+        }
+        #hamBurger{
+            background: transparent;
+            border: none;
+        }
+      
+        body{
+            font-family: sans-serif;
+            background: #f6f6f7;
+>>>>>>> arpit
         }
         #headingCart{
             max-width:900px;
@@ -71,14 +134,22 @@
            width: auto;
         }
         #top{
+<<<<<<< HEAD
           background: cornsilk;
+=======
+          background: #f6f6f7;
+>>>>>>> arpit
         }
         #top>div{
           display: flex;
           flex-wrap: nowrap;
           justify-content: center;
           margin-top: 5px;
+<<<<<<< HEAD
           background: whitesmoke;
+=======
+          background: #fff;
+>>>>>>> arpit
           color: navy;
           font-size: large;
           font-weight: 400;
@@ -101,6 +172,7 @@
           margin-top: 0;
         }
         #bot>button{
+<<<<<<< HEAD
           color: green;
           border-radius: 5px;
           background: skyblue;
@@ -113,6 +185,22 @@
           color: rosybrown;
           font-family: cursive;
           font-size: large;
+=======
+          color: white;
+          border-radius: 10px;
+          background: #007bff;
+          padding: 5px;
+          height: 30px;
+          border: none;
+        }
+        
+        #bot>div{
+          background: #fff;
+          padding: 10px;
+          color: black;
+          font-size: small;
+          font-weight: bold;
+>>>>>>> arpit
         }
         #bot input{
             margin: 10px 0 10px 0;
@@ -131,9 +219,31 @@
           display: flex;
           flex-direction: row;
         }
+<<<<<<< HEAD
     </style>
 </head>
 <body>
+=======
+        #bot{
+         background: white;
+        }
+    </style>
+</head>
+<body>
+  <nav> 
+    <ul>
+        <button id="hamBurger" onclick="btn()"><h1>&#9776;</h1></button>
+        <div>
+            <div id="log1">JioMart</div>
+            <div id="log2">BETA</div>
+        </div>
+        <input type="text" placeholder="Search">
+        <li><a href="signIn.html" id="sign">&#xf007;SignIn/SignUp</a></li>
+        <li><a href="Cart.html" id="Cart">&#xf007;Cart</a></li>
+    </ul>
+</nav>
+  
+>>>>>>> arpit
     <div id="headingCart">My Cart</div>
     <div id="emptyCart">
         <div><img src="https://www.jiomart.com/msassets/images/emptycart.svg" alt=""></div>
@@ -148,9 +258,15 @@
         <input type="text" placeholder="Add Code Here" id="couponCode">
         <button onclick="checkCoupon()">Click Here to Apply Code</button>
         <h3 id="payment">Payment Details</h3>
+<<<<<<< HEAD
         <div>MRP TOTAL:       <span id="pRc"></span></div>
         <div>Product Discount: <span id="dSc"></span></div>
         <div>Total Amount: <span id= tA></span></div>
+=======
+        <div>MRP TOTAL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pRc"></span></div>
+        <div>Product Discount <span id="dSc"></span></div>
+        <div>Total Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id= tA></span></div>
+>>>>>>> arpit
         <input type="number" placeholder="Enter Your Number Here" id="verifyNumber">
         <button onclick="placeOrder()">Place Order</button>
       </div>
@@ -160,7 +276,11 @@
      var emptyCart = document.getElementById("emptyCart");
      var productCont = document.getElementById("userProCont");
       
+<<<<<<< HEAD
        if(localStorage.getItem("jioUserCart") !== null)
+=======
+       if(localStorage.getItem("jioUserCart") !== null && JSON.parse(localStorage.getItem("jioUserCart")).length !== 0)
+>>>>>>> arpit
        {
           var con = document.getElementById("top");
             emptyCart.innerHTML = "";
@@ -170,6 +290,7 @@
             {
                let divC = document.createElement("div");
                let image = document.createElement("img");
+<<<<<<< HEAD
                let Name = document.createElement("div");
                let Price = document.createElement("div");
                
@@ -180,6 +301,27 @@
               Price.textContent ="Price: " + product.price;
              
               divC.append(image,Name,Price);
+=======
+               let d = document.createElement("div");
+               let Price = document.createElement("div");
+              total +=  +product.price.trim().split(" ")[1];
+                
+              image.src = product.img;
+
+              let Name = document.createElement("div");
+              let btn  = document.createElement("button");
+              
+              Name.textContent = "Name of Product: "+ product.name;
+              Price.textContent ="Price: " + product.price;
+              d.append(Name,btn);
+              btn.innerText = "Remove";
+              btn.style.width = "50%"
+              btn.style.border ="none"
+              btn.onclick = function(){
+                removeEle(product);
+              }
+              divC.append(image,d,Price);
+>>>>>>> arpit
               con.append(divC);
 
               let actPrice = document.getElementById("pRc");
@@ -258,6 +400,35 @@
                 window.location.href ="signIn.html";
             }
        }
+<<<<<<< HEAD
+=======
+
+      function removeEle(product)
+      {
+        
+        var productsArr = JSON.parse(localStorage.getItem("jioUserCart"));
+        var arr = [] 
+        var cnt = 0;
+        for(var i = 0; i<productsArr.length; i++)
+        {
+          if(productsArr[i].name === product.name)
+          {
+            cnt++;
+          }
+          if(cnt>1 && productsArr[i].name === product.name)
+          {
+             arr.push(productsArr[i]);
+          }
+          else if(productsArr[i].name !== product.name)
+          {
+            arr.push(productsArr[i]);
+          } 
+        }
+        console.log(arr);
+      localStorage.setItem("jioUserCart",JSON.stringify(arr));
+      window.location.href = "C:/CopyProjectTests/Cart.html";
+      }
+>>>>>>> arpit
     </script>
 </body>
 </html>
