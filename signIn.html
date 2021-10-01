@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        
+        body{
+            font-family: sans-serif;
+            background: #f6f6f7;
+        }
+        nav{
+            background: #007bff;
+            min-width: 1400px;
+            margin: auto;
+            height: 72px;
+        }
+        nav ul{
+            display: flex;
+            text-align: center;
+            margin: 0;
+            width: 1100px;
+            margin: auto;
+        }
+        nav div{
+            margin: auto;
+        }
+        ul h1{
+            height: fit-content;
+            color: white;
+        }
+        ul li {
+            margin: auto;
+            text-decoration: none;
+            list-style: none;
+        }
+       li a{
+           text-decoration: none;
+           color: white;
+           font-size: 15px;
+           font-weight: 400;
+       }
+        ul input{
+            width: 40%;
+            height: 30px;
+            margin: auto;
+            border: none;
+            border-radius: 5px;
+        }
+        #log1 {
+          font-size: 32px;
+          color: white;
+          font-weight: bold;
+        }
+        #log2{
+            font-size: 10px;
+            text-align: right;
+            color: white;
+            font-weight: 300;
+        }
+        #hamBurger{
+            background: transparent;
+            border: none;
+        }
+      #cont{
+        display: flex;
+        width: 1100px;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+        background: white;
+      }
+      #cont div img{
+          border-radius: 15px 0 0 15px;
+      }
+      #form{
+          display: flex;
+          flex-direction: column;
+          margin-left:150px;
+          width: 100%;
+      }
+      #form > #txt ,#pwd{
+          margin: 10px 0 30px 0;
+      }
+      .signInText{
+          margin:30px 0 0 0;
+          font-size: x-large;
+          font-weight: bold;
+      }
+      .request{
+          font-size: small;
+          color: grey;
+          margin: 5px 0 30px 0;
+      }
+      #txt ,#pwd{
+          width: 90%;
+          border: none;
+      }
+      .btn{
+         height: 50px;
+         background: #007bff;
+         border-radius: 50%;
+         border: none;
+         width: 50px;
+         margin: 50px 0 0 150px;
+         margin: auto ;
+         color: white;
+      }
+    </style>
+</head>
+<body>
+    <nav> 
+        <ul>
+            <button id="hamBurger" onclick="btn()"><h1>&#9776;</h1></button>
+            <div>
+                <div id="log1">JioMart</div>
+                <div id="log2">BETA</div>
+            </div>
+            <input type="text" placeholder="Search">
+            <li><a href="" id="sign">&#xf007;SignIn/SignUp</a></li>
+            <li><a href="Cart.html" id="Cart">&#xf007;Cart</a></li>
+        </ul>
+    </nav>
+    <div id="cont">
+        <div>
+            <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
+        </div>
+        <div id="checkSignIn" >
+            <form action="" id="form" onsubmit="checkSignIn(event)"> 
+                <div class="signInText">Sign in</div>
+                <div class="request">Please enter your details</div>
+                <label for="txt">+91</label>
+                <input type="number" id ="txt" placeholder="Enter Your Mobile Number...">
+                <input type="password" placeholder="Enter your password if you already a user" id="pwd">
+                <input type="submit" class="btn" >
+            </form>
+        </div>
+    </div>
+        <script>
+
+            var myForm = document.getElementById("form");
+           if(localStorage.getItem("userNumber") === null)
+           {
+               localStorage.setItem("userNumber", JSON.stringify([]));
+           }
+             
+         function checkSignIn(e)
+         {
+            e.preventDefault();
+            var numberIn = myForm.txt.value;
+            var pass = myForm.pwd.value;
+            console.log(pass)
+            
+              let array =  JSON.parse(localStorage.getItem("MartUsers"));
+              var isPresent = false;
+              var Name = ""
+              array.forEach(function(p)
+              { 
+                 if(p.Mobile== numberIn && pass == p.Password)
+                 {
+                     isPresent = true;
+                     Name = p.Name;
+                 }
+              })
+              if(isPresent === false && numberIn !== "")
+              {
+                 window.location.href = "SignUp.html";
+             }else if(numberIn == "")
+             {
+                 alert("you have Entered Empty Number")
+             }else{
+                   alert("Logged In Successfully!")
+                   window.location.href = "home.html";
+                }
+                console.log(isPresent);             
+          }
+        </script>
+    </div>
+</body>
+</html>
