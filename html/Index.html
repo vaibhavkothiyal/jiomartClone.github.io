@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<!-- ---------------------"BODY" starts here----------------------- -->
+
+<body id="htmlBody">
+    <!----------top navbar-------->
+    <div id="navbar">
+        <div>
+            <span class="material-icons menu">menu</span>
+        </div>
+        <div id="nameLogo">
+            <div onclick="refresh()">JioMart</div>
+            <div>BETA</div>
+        </div>
+        <div><input id="searchItem" type="text" placeholder="Search essential, groceries, and more..."></div>
+        <div  class="signIn navinnerdiv navicon">
+            <span class="material-icons">perm_identity</span>
+            <div class="navText">
+                <div id="signU" onclick="goTOsignIn()">Sign In / Sign Up</div>
+                <div id='ddl'>
+                    <div id="in"></div>
+                    <div id='ddl2'></div>
+                </div>
+            </div>
+        </div>
+        <div onclick="goTocart()" class="cart navinnerdiv navicon">
+            <span class="material-icons">shopping_cart</span>
+            <div class="navText">Cart</div>
+        </div>
+    </div>
+    <div id="catagNavbar"></div>
+    <!-------catagNavbr---------->
+    <div id="productSpace">
+        <div id="slideContainer"></div>
+        <div id="poster1"></div>
+        <div id="Categories1">
+            <h1>Shop from Top Categories</h1>
+            <div id="topCategories1"></div>
+        </div>
+
+        <div class="add_banner">
+            <img class="addimg" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1629735527_web.jpg"></img>
+        </div>
+
+        <div id="topDeals2">
+            <h1>TOP DEALS</h1>
+            <div id="topdeals2"></div>
+        </div>
+
+        <div id="Offers on daily essentials">
+            <h1>Offers on daily essentials</h1>
+            <div id="dailyEssentials3"></div>
+        </div>
+
+        <div id="womenFashion4">
+            <h1>Women' Fashion</h1>
+            <div class="pimg401">
+                <div>
+                    <img class="pimg4"
+                        src="https://www.jiomart.com/images/cms/section/category/498/579.png?v=1628786058">
+                </div>
+                <div>
+                    <img class="pimg4"
+                        src="https://www.jiomart.com/images/cms/section/category/498/527.png?v=1628786058">
+                </div>
+            </div>
+
+            <div id="poster5"></div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>MOST POPULAR CATEGORIES</h4>
+                        <ul>
+                            <li><a href="#">Staples</a></li>
+                            <li><a href="#">Beverages</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                            <li><a href="#">Home Care</a></li>
+                            <li><a href="#">Fruits and Vegetables</a></li>
+                            <li><a href="#">Baby Care</a></li>
+                            <li><a href="#">Snacks & Branded Foods</a></li>
+                            <li><a href="#">Dairy & Bakery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col right">
+                        <h4>CUSTOMER SERVICES</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Service Policy</a></li>
+                            <li><a href="#">E-waste Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col right1">
+                        <h4>CONTACT US</h4>
+                        <p>WhatsApp us: <span style="display:inline-block"><a href="">86210 39926</a></span></p>
+                        <p>Call Us : <span style="display:inline-block"><a href="">1800 890 1222</a></span> <br>
+                            8:00 AM to 8:00 PM, 365 days</p>
+                        <p>Please note that you are accessing the BETA Version of <a style="font-weight: 100;"
+                                href="#">www.jiomart.com</a> </p>
+                        <p>Should you encounter any bugs, glitches, lack of functionality, delayed deliveries, billing
+                            errors or other problems on the beta website, please email us on <span><a
+                                    href="cs@jiomart.com">cs@jiomart.com</a></span></p>
+                        <h4>DOWNLOAD NOW</h4>
+                        <a href="https://play.google.com/store/apps/details?id=com.jpl.jiomart"
+                            style="margin-right: 16px;"><img
+                                src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"
+                                alt="Download Jiomart App for Android from Play Store"></a>
+                        <a href="https://apps.apple.com/in/app/jiomart/id1522085683"><img
+                                src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"
+                                alt="Download Jiomart App for iOs from App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <section class="bottom">
+                <div class="last">
+                    <p>Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+, Google Chrome 80+</p>
+                    <span>© 2021 All rights reserved. Reliance Retail Ltd.</span>
+                </div>
+            </section>
+        </footer>
+
+        <script src="/scripts/scripts.js">
+        </script>
+</body>
+
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/styles/product.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<!-- ---------------------"BODY" starts here----------------------- -->
+
+<body id="htmlBody">
+    <div id="navbar">
+        <div>
+            <span class="material-icons menu">menu</span>
+        </div>
+        <div style="cursor: pointer;" onclick="refresh()">
+            <div>JioMart</div>
+            <div>BETA</div>
+        </div>
+        <div><input id="searchItem" type="text" placeholder="Search essential, groceries, and more..."></div>
+        <div style="cursor: pointer;" class="signIn navinnerdiv">
+            <span class="material-icons">perm_identity</span>
+            <div onclick="goTOsignIn()" class="navText">Sign In / Sign Up</div>
+        </div>
+        <div style="cursor: pointer;" class="cart navinnerdiv">
+            <span class="material-icons">shopping_cart</span>
+            <div onclick="goTocart()" class="navText">Cart</div>
+        </div>
+    </div>
+    <div id="productSpace">
+        <div id="productSlide"></div>
+        <div id="kidsWear">
+            <h1>ALL PRODUCTS</h1>
+            <div id="highlow">
+                <button onclick="sortLH()">Low to High</button>
+                <button onclick="sortHL()">High to Low</button>
+            </div>
+            <div id="ExploreBestsellers"></div>
+        </div>
+    </div>
+
+    <script src="/scripts/product.js"></script>
+</body>
+
+</html>
+
+<!-- ---------------------script starts here----------------------- -->
