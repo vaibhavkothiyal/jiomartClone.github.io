@@ -3,7 +3,7 @@
         window.location.href = "signIn.html";
     }
     function goTocart() {
-        window.location.href = "cart.html";
+        window.location.href = "Cart.html";
     }
 
 
