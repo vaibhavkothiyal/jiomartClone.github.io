@@ -1,13 +1,21 @@
 
-# Project Title
+# JioMart (Clone)
+-----
+### For Educational And Learning Purpose*
+Project: Make a clone of JioMart website.
 
-JioMart Clone
+Original-Website: https://www.jiomart.com/
 
-## Tech Stack
+Cloned-Website: https://vaibhavkothiyal.github.io/jiomartClone.github.io/html/Index.html
 
-**Frontend:** HTML,CSS
+JIoMart is an E-commerce market place for online groceries, home essentials.
 
-**Backend:** Advance JavaScript
+# Technology Stack Used 🌟
+* HTML
+* CSS
+* JavaScript
+
+For storing user data we also used localStorage.
 
 
 ## Team Members
@@ -25,11 +33,20 @@ We have clone website named JioMart a online shopping website so we as a team de
 
 ## Screenshots
 
+* Landing page
 ![App Screenshot](https://i.ibb.co/YBvP5Mk/Screenshot-1447.png)
 
+* Login page
+![App Screenshot](https://ibb.co/m0bJTW2)
 
-
+## Project Blog 📑
 #### To read more about our project you ->[click here](https://medium.com/@vaibhavkkothiyal/cloning-jiomart-getting-started-as-a-full-stack-web-developer-b5b7b427e349)
+
+## End Notes 📑
+In this project we were tried to achieve a near to perfect clone of the original website as much as possible. This entire journey of this construct week has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. Most of the features are added and functionality of the website is achieved.
+
+## Limitations
+All pages are not responsive yet , those pages are might not be properly visible on small screen devices.
  
  
 
