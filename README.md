@@ -34,10 +34,28 @@ We have clone website named JioMart a online shopping website so we as a team de
 ## Screenshots
 
 * Landing page
+
 ![App Screenshot](https://i.ibb.co/YBvP5Mk/Screenshot-1447.png)
 
 * Login page
-![App Screenshot](https://ibb.co/m0bJTW2)
+
+![App Screenshot](https://www.linkpicture.com/q/Login.png)
+
+* Cart page
+
+![App Screenshot](https://www.linkpicture.com/q/cart_6.png)
+
+* Checkout page
+
+![App Screenshot](https://www.linkpicture.com/q/ckeckout.png)
+
+* Checkout page
+
+![App Screenshot](https://www.linkpicture.com/q/payment_3.png)
+
+* Success page
+
+![App Screenshot](https://www.linkpicture.com/q/success.png)
 
 ## Project Blog 📑
 #### To read more about our project you ->[click here](https://medium.com/@vaibhavkkothiyal/cloning-jiomart-getting-started-as-a-full-stack-web-developer-b5b7b427e349)
